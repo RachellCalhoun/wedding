@@ -6,7 +6,7 @@
          <meta name="viewport" content="width=device-width, initial-scale=1">
          <title>Rachell Calhoun</title>
          <link rel="shortcut icon" type="image/x-icon" href="http://www.favicon-generator.org/favicon-generator/htdocs/favicons/2015-04-11/9b70faf47d3f0c13a97b7d14e4c44152.ico" /> 
-	       <link type="text/css" rel="stylesheet" href="{% static 'registry/registry.css'%}"/>
+	       <link type="text/css" rel="stylesheet" href="{% static 'staticsites/mainstyle.css'%}"/>
       </head>
       
 <body>
@@ -31,7 +31,7 @@
  		<div class="col-2">
  			<ul class="nav">
 	            <li><a href="/home">Home</a></li>
-	            <li><a href="/ourstory">Our Story</a></li>
+              <li><a href="/ourstory">Our Story</a></li>
               <li><a href="/registry">Registry</a></li>
               <li><a href="/rsvp">RSVP</a></li>
               <li><a href="/info">Info</a></li>
@@ -41,16 +41,8 @@
         <div class="col-1">
         </div>
         <div class="col-8">
-          <h1 class="title">Stuff we'd love but don't have yet!<h1>
-      {% for entry  in  entries %}
-        
-        <h3> Store: {{entry.store}}</h3>
-        <img class="images" src="{{entry.img.url}}">
-        <p> Item: {{entry.item}}</p>
-        <p> Price: {{entry.price}}</p>
-			 <p><a href="{{entry.location}}">Visit store's website</a><p>
-        
-       {% endfor %}
+          <h1 class="title">Home!<h1>
+     
       </div>
       <div class="col-1">
       </div>

@@ -31,7 +31,7 @@
  		<div class="col-2">
  			<ul class="nav">
 	            <li><a href="/home">Home</a></li>
-	            <li><a href="/ourstory">Our Story</a></li>
+              <li><a href="/ourstory">Our Story</a></li>
               <li><a href="/registry">Registry</a></li>
               <li><a href="/rsvp">RSVP</a></li>
               <li><a href="/info">Info</a></li>
@@ -41,16 +41,7 @@
         <div class="col-1">
         </div>
         <div class="col-8">
-          <h1 class="title">Stuff we'd love but don't have yet!<h1>
-      {% for entry  in  entries %}
-        
-        <h3> Store: {{entry.store}}</h3>
-        <img class="images" src="{{entry.img.url}}">
-        <p> Item: {{entry.item}}</p>
-        <p> Price: {{entry.price}}</p>
-			 <p><a href="{{entry.location}}">Visit store's website</a><p>
-        
-       {% endfor %}
+          <h1 class="title">Places to stay!<h1>
       </div>
       <div class="col-1">
       </div>
