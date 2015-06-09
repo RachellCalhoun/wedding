@@ -7,4 +7,4 @@ class Entry(models.Model):
 	price = models.PositiveIntegerField()
 	location = models.CharField(max_length = 200)
 	bought = models.BooleanField()
-	img = models.ImageField()
+	img = models.ImageField(blank=True, null=True)
