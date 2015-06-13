@@ -10,21 +10,42 @@ body {
     background-repeat:no-repeat;
     background-size: cover;
 }
-
-.col-8 p{
-    padding-bottom: 20px;
+.content {
+    max-width: 90%;
+    margin: auto;
 }
-.col-8 a{
-    padding-bottom:10px;
-}
-.col-8 h3{
-    
-}
-.images {
-    max-width: 160px;
-    min-width: 50px;
-    border-radius: 15px;
+.images{
+    border-radius: 10px;
+    max-width:20%;
+    display:block;
     float:right;
+}
+.store {
+    padding-top: 50px;
+}
+.location {
+    margin-bottom: 50px;
+
+}
+.menubutton {
+    display:none;
+}
+.menu{
+    display: none;
+    list-style: none;
+    border:1px solid red;
+    position: absolute;
+    background-color: red;
+    margin:0px;
+    margin:auto;
+     
+}
+.menu li{
+    padding-top:1em;
+
+}
+.mobilename{
+    display:none;
 }
 .grid {
     margin: 0 auto;
@@ -50,6 +71,7 @@ a:hover{
     display:flex;
     
 }
+
 .row3 {
     width: 100%;
     display: flex;
@@ -58,7 +80,7 @@ a:hover{
     width: 100%;
     display: flex; 
 }
-.row4 p{
+.close{
     padding-top: 5px;
     font-size: 12px;
 }
@@ -66,8 +88,10 @@ a:hover{
     text-align: center;
 }
 .title {
-    text-align: center;
-    padding-bottom:20px;
+    font-size: 2em;
+    margin: auto;
+    padding-bottom:1em;
+    padding-top: 1em;
 }
 .nav {
     background-color: transparent;
@@ -86,9 +110,8 @@ a:hover{
     padding-top: 30px;
     font-size: 18px;
 }
-.contact li {
-    display: inline;
-    padding:10%;
+.contact p{
+    text-align: center;
 }
 
 
@@ -139,18 +162,47 @@ a:hover{
 .col-12 {
     width: 100%;
 }
- @media only screen and (max-width:1040px) {
-    .contact li{
-        padding: 0px;
-        border: none;
-    }
- }
- @media only screen and (max-width:800px) {
-    .contact li{
-        padding:0px;
-        border:none;
-    }
+
+ @media only screen and (max-width:40em) {
+    
     .nav {
         display:none;
     }
+    .content {
+        max-width: 90%;
+        margin:auto;
+    }
+    .images{
+        max-width:100%;
+        display:block;
+    }
+
+    .row1 {
+        font-size: 1em;
+    }
+    .name{
+        display:none;
+    }
+    .mobilename{
+        display:block;
+    }
+    .menubutton{
+        display:block;
+        list-style: none;
+        text-align: center;
+    }
+
+    .col-9{
+        width:100%;
+    }
+    .col-8 {
+        width:100%;
+    }
+    .title{
+        margin:auto;
+        font-size: 1.5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
  }

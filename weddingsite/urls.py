@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^registry/', include('registry.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^rsvp/', include('rsvp.urls')),
+    url(r'^photos/', include('photos.urls')),
     url(r'^home/',TemplateView.as_view(template_name='staticsites/home.html'),name='home'),
     url(r'^ourstory/',TemplateView.as_view(template_name='staticsites/ourstory.html'),name='ourstory'),
     url(r'^info/',TemplateView.as_view(template_name='staticsites/info.html'),name='info'),

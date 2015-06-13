@@ -7,23 +7,31 @@
          <title>Rachell Calhoun</title>
          <link rel="shortcut icon" type="image/x-icon" href="http://www.favicon-generator.org/favicon-generator/htdocs/favicons/2015-04-11/9b70faf47d3f0c13a97b7d14e4c44152.ico" /> 
 	       <link type="text/css" rel="stylesheet" href="{% static 'registry/registry.css'%}"/>
+         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        
       </head>
       
 <body>
   <div class="grid">
     <div class="row1">
-      <div class="col-3">
-      </div>
       <div class="col-3"> 
-        <p class="name">Rachell Calhoun and DaYoung</p>
+        <p class="name">Rachell and DaYoung</p>
+        <p class="mobilename">Rachell & DY</p>
+      </div>
+      <div class="col-6">
+      <p class="menubutton">Menu</p>
+            <ul class="menu">
+              <li><a href="/home">Home</a></li>
+              <li><a href="/ourstory">Our Story</a></li>
+              <li><a href="/registry">Registry</a></li>
+              <li><a href="/rsvp">RSVP</a></li>
+              <li><a href="/info">Info</a></li>
+              <li><a href="/photos">#RachellDY</a></li>
+            </ul>
       </div>
       <div class="col-3">
-      </div>
-      <div class="col-3">
-          <ul class="contact">
-            <li><a href="mailto:rachell.calhoun@gmail.com">Email Me</a></li>
-            
-          </ul>
+          
+            <p class="contact"><a href="mailto:rachell.calhoun@gmail.com">Email Me</a></p>
       </div>
     </div>
     
@@ -41,16 +49,18 @@
         <div class="col-1">
         </div>
         <div class="col-8">
-          <h1 class="title">Stuff we'd love but don't have yet!<h1>
+        <div class="content">
+          <p class="title">Stuff we'd love but don't have yet!</p>
       {% for entry  in  entries %}
         
-        <h3> Store: {{entry.store}}</h3>
+        <h3 class="store"> Store: {{entry.store}}</h3>
         <img class="images" src="{{entry.img.url}}">
-        <p> Item: {{entry.item}}</p>
-        <p> Price: {{entry.price}}</p>
-			 <p><a href="{{entry.location}}">Visit store's website</a><p>
+        <p class="item"> Item: {{entry.item}}</p>
+        <p class="price"> Price: {{entry.price}}</p>
+			 <p><a href="{{entry.location}}" class="location">Visit store's website</a></p>
         
        {% endfor %}
+       </div>
       </div>
       <div class="col-1">
       </div>
@@ -74,7 +84,7 @@
   <div class="row4">
       <div class="col-3"></div>
       <div class="col-6">
-        <p>All rights reserved by <em>Rachell Calhoun</em></p>
+        <p class="close">All rights reserved by <em>Rachell Calhoun</em></p>
       </div>
       <div class="col-3"></div>
   </div>
@@ -82,3 +92,12 @@
 </html>
 
 
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.menubutton').on('click', function(){
+      $('.menu').toggle();
+    })
+  })
+
+</script>

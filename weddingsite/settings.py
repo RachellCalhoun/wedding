@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'registry',
     'staticsites',
     'rsvp',
-    'photos'
+    'photos',
 )
 
 MIDDLEWARE_CLASSES = (

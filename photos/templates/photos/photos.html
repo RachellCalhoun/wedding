@@ -6,7 +6,7 @@
          <meta name="viewport" content="width=device-width, initial-scale=1">
          <title>Rachell Calhoun</title>
          <link rel="shortcut icon" type="image/x-icon" href="http://www.favicon-generator.org/favicon-generator/htdocs/favicons/2015-04-11/9b70faf47d3f0c13a97b7d14e4c44152.ico" /> 
-         <link type="text/css" rel="stylesheet" href="{% static 'staticsites/mainstyle.css'%}"/>
+	       <link type="text/css" rel="stylesheet" href="{% static 'photos/photos.css'%}"/>
          <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-instagram/0.3.1/instagram.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
@@ -36,34 +36,32 @@
       
     </div>
     
-  <div class="row2">
-    <div class="col-2">
-      <ul class="nav">
-              <li><a href="/home">Home</a></li>
+ 	<div class="row2">
+ 		<div class="col-3">
+ 			<ul class="nav">
+	            <li><a href="/home">Home</a></li>
               <li><a href="/ourstory">Our Story</a></li>
               <li><a href="/registry">Registry</a></li>
               <li><a href="/rsvp">RSVP</a></li>
               <li><a href="/info">Info</a></li>
               <li><a href="/photos">#RachellDY</a></li>
-            </ul>
+          	</ul>
             
         </div>
-        <div class="col-1">
-        </div>
-        <div class="col-8">
-          <h1 class="title">This is our story! <h1>
+       
+        <div class="col-9">
+          <h1 class="title">If you're on Instagram tag #RachellDY!<h1>
      
-      </div>
-      <div class="col-1">
+      
       
       </div>
-  </div>
+ 	</div>
     
     <div class="row3">
       <div class="col-3">
       </div>
       <div class="col-9">
-        <div class="Insert content here"></div>
+        <div class="instagram"></div>
       </div>
     
   </div>
@@ -81,7 +79,35 @@
 
 
 
+<script type="text/javascript">
+  jQuery(function($) {
+  $('.instagram').on('willLoadInstagram', function(event, options) {
+  });
+  $('.instagram').on('didLoadInstagram', function(event, response) {
+    hashResults = response.data;
+    for (var i = 0; i < hashResults.length; i++) {
+      var imageUrl = hashResults[i].images.standard_resolution.url;
+      var imageHtml = "<img class='instagram-image' src=" + imageUrl + "></img>";
+      var user = hashResults[i].user.username;
+      var userHtml = "<p class='user'>" + user + "</p>";
+      var caption = hashResults[i].caption.text;
+      var captionHtml = "<p class='caption'>" + caption + "</p>";
+      var date = moment(parseInt(hashResults[i].created_time) * 1000).fromNow();
+      var dateHtml = "<p class date='date'>"+ date+ "</p>";
 
+      $('.instagram').append(imageHtml);
+      $('.instagram').append(userHtml);
+      $('.instagram').append(captionHtml);
+      $('.instagram').append(dateHtml);
+
+    }
+  });
+  $('.instagram').instagram({
+    hash: 'kitten',
+    clientId: '70f9b39897aa42368854efc434bd82b6'
+  });
+});
+</script>
 
 <script type="text/javascript">
   $(document).ready(function() {
