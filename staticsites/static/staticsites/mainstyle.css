@@ -10,6 +10,8 @@ body {
     background-repeat:no-repeat;
     background-size: cover;
 }
+
+}
 .instagram {
     max-width: 90%;
     margin: auto;
@@ -169,6 +171,11 @@ a:hover{
         max-width:100%;
         display:block;
     }
+    .widget {
+        max-width: 100%;
+        margin:auto;
+    }
+    
     .caption {
         display:none;
     }
@@ -193,6 +200,7 @@ a:hover{
     .col-8 {
         width:100%;
     }
+
     .title{
         margin:auto;
         font-size: 1.5em;
