@@ -174,11 +174,11 @@ a:hover{
         display:none;
     }
     .instagram {
-        max-width: 90%;
+        max-width: 100%;
         margin:auto;
     }
     .instagram-image{
-        max-width:100%;
+        max-width:90%;
         display:block;
     }
     .caption {
