@@ -11,7 +11,9 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
-
+    height:100%;
+    padding:10px;
+    padding-bottom:60px;
 }
 .instagram {
     max-width: 90%;
@@ -23,6 +25,12 @@ body {
 
     display:block;
     
+}
+.content {
+    max-width: 90%;
+    margin: auto;
+    min-height: 100%;
+    position:relative;
 }
 .menubutton {
     display:none;
